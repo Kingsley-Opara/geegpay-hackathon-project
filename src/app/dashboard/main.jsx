@@ -25,7 +25,7 @@ function Main() {
         <Navbar/>
        
         <section>
-            <div className='flex space-x-12 max-md:flex-col sm:items-center max-lg:space-x-8'>
+            <div className='flex space-x-12 max-md:flex-col max-sm:items-center max-lg:space-x-8'>
                 <Chart/>
                 <div className='mt-[7rem] flex flex-col space-y-4 max-md:space-y-12'>
                   <div className='flex max-sm:flex-col max-sm:space-y-10 max-md:space-x-9 max-sm:space-x-0 space-x-6'>
