@@ -4,31 +4,27 @@ import {createContext, useContext, useState, useEffect } from "react";
 const GlobalStateContext = createContext()
 
 export const GlobalStateProvider = ({children}) =>{
-
-    const [state, setState] = useState({
-        theme: 'light',
-        toggle: false,
-
-    })
-
-    const updateToggle = (toggle) => setState({...state, toggle})
-    useEffect(() =>{
-        if (state.toggle === true){
-            localStorage.setItem('theme', 'dark')
-    
-        } else{
-            localStorage.setItem('theme', 'light')
+    const [theme, setTheme] = useState('light');
+    const [showSideBar, setShowSideBar] = useState(false)
+    useEffect(() => {
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme) {
+          setTheme(storedTheme);
+          document.documentElement.classList.add(storedTheme);
         }
+      }, []);
     
-
-    }, [state])
+      const toggleTheme = () => {
+        const newTheme = theme === 'light' ? 'dark' : 'light';
+        setTheme(newTheme);
+        localStorage.setItem('theme', newTheme);
     
-
-
-    const updateTheme = () => setState({...state, theme:localStorage.getItem('theme')})
-
+        // Add and remove appropriate classes on document body
+        document.documentElement.classList.remove(theme);
+        document.documentElement.classList.add(newTheme);
+      };
     return(
-        <GlobalStateContext.Provider value={{state, updateToggle, updateTheme}}>
+        <GlobalStateContext.Provider value={{theme, toggleTheme, showSideBar, setShowSideBar}}>
             {children}
 
         </GlobalStateContext.Provider>

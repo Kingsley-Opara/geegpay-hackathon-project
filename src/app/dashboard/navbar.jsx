@@ -11,33 +11,44 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Chart from './chart';
 import Sales from './sales';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
+import { useGlobalState } from '../context';
+import CloseIcon from '@mui/icons-material/Close';
+
 
 function Navbar() {
+    const {showSideBar, setShowSideBar} = useGlobalState()
+
+    const handleClick = () => {
+        setShowSideBar(!showSideBar)
+    }
   return (
-    <nav className='ml-5 mt-4 max-md:ml-0 max-md:mt-7 fixed'>
-        <div className='flex space-x-[17rem] max-md:space-x-[0rem]'>
-            <div>
-                <h3 className='text-2xl mt-3 max-md:text-xl max-sm:mt-0 max-sm:text-sm'>Dashboard</h3>
+    <nav className='ml-5 mt-4 max-md:ml-0 max-md:mt-7 flex'>
+        <div className='flex space-x-[17rem] max-md:space-x-[0rem] justify-between'>
+            <div className='flex justify-between'>
+                <h3 className='text-2xl mt-3 max-md:text-xl max-sm:mt-0 max-sm:text-sm max-md:ml-3'>Dashboard</h3>
+               
 
 
             </div>
             
-            <div className='mt-3 ml-20 flex space-x-7 max-md:space-x-4 max-sm:hidden'>
-                <div className='relative'>
+            <div className='mt-3 ml-20 flex space-x-7 max-md:space-x-4 max-md:hidden '>
+                <div className='relative bg-white text-black dark:bg-gray-800 dark:text-white max-lg:hidden'>
                     <SearchIcon className= "absolute top-1 left-2"/>
-                    <input type="text" className='h-9 w-[18rem] rounded-xl p-3 pl-10 max-md:w-[11rem]' placeholder='Search...'/>
+                    <input type="text" className='h-9 w-[18rem] rounded-xl p-3 pl-10 
+                    max-md:w-[11rem] text-black bg-white dark:bg-gray-800 dark:text-white' placeholder='Search...'/>
                 </div>
                 
 
-                <DemoComponent/>  
+                <DemoComponent className='max-sm:hidden'/>  
 
                 <div className ="mt-1 flex space-x-5 pr-4">
-                    <div className='rounded-full bg-white w-[42px] h-[40px]'>
+                    <div className='rounded-full bg-white w-[42px] h-[40px] text-black dark:bg-gray-800 dark:text-white'>
                         <NotificationsNoneIcon className='cursor-pointer mt-2 text-[1.8rem] pl-2'/>
 
                     </div>
                     
-                    <div className="rounded-2xl border-white bg-white pl-4 pr-4 pt-1 flex space-x-2 max-md:hidden">
+                    <div className="rounded-2xl border-white bg-white pl-4 pr-4 pt-1 
+                    flex space-x-2 max-md:hidden dark:bg-gray-800 dark:text-white text-black">
                         <Image src={dp} alt='dp' className='h-8 w-8 mt-1'/>
                         <div className="flex flex-col">
                             <div className='text-md font-semibold'>Justin Bergson</div>
@@ -52,10 +63,18 @@ function Navbar() {
                         <ExpandMoreIcon className='cursor-pointer'/>
 
                     </div>
-                </div>              
+                </div> 
+
+                             
                 
             </div>
+        
             
+        </div>
+
+        <div className='ml-auto md:hidden cursor-pointer'>
+            {!showSideBar ?<MenuOpenIcon onClick = {() => handleClick()}/>: 
+                <CloseIcon onClick = {() => handleClick()}/>}
         </div>
         
 
