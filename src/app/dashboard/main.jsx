@@ -3,14 +3,14 @@ import "./dashboard.css"
 import Chart from './chart';
 import Sales from './sales';
 import Navbar from './navbar';
-import icon from '../images/icon.jpg'
-import greenArrow from '../images/line1.jpg'
-import smallGreen from '../images/smallGreen.png'
-import icon2 from '../images/icon2.jpg'
-import line2 from '../images/line2.jpg'
-import smallRed from '../images/smallRed.jpg'
-import icon3 from '../images/icon3.jpg'
-import icon4 from '../images/icon4.jpg'
+import icon from './images/icon.jpg'
+import greenArrow from './images/line1.jpg'
+import smallGreen from './images/smallGreen.png'
+import icon2 from './images/icon2.jpg'
+import line2 from './images/line2.jpg'
+import smallRed from './images/smallRed.jpg'
+import icon3 from './images/icon3.jpg'
+import icon4 from './images/icon4.jpg'
 import LastOrders from './lastOrders';
 import TopPlatform from './topplatform';
 

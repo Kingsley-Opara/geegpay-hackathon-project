@@ -3,15 +3,15 @@ import Image from 'next/image'
 import React from 'react'
 import { useState } from 'react';
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
-import logo from "../images/logo.png"
-import frame from "../images/frame.png"
-import box from "../images/box.png"
-import contact from "../images/contact.png"
-import cube from "../images/cube.png"
-import divide from "../images/divide.png"
-import exclaim from "../images/exclaim.png"
-import star from "../images/star.png"
-import lightmode from "../images/lightmode.jpg"
+import logo from "./images/logo.png"
+import frame from "./images/frame.png"
+import box from "./images/box.png"
+import contact from "./images/contact.png"
+import cube from "./images/cube.png"
+import divide from "./images/divide.png"
+import exclaim from "./images/exclaim.png"
+import star from "./images/star.png"
+import lightmode from "./images/lightmode.jpg"
 import NightsStayIcon from '@mui/icons-material/NightsStay';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { useGlobalState } from '../context';

@@ -3,8 +3,8 @@ import "./dashboard.css"
 import SearchIcon from '@mui/icons-material/Search';
 import Datepicker from "tailwind-datepicker-react"
 import DemoComponent from './datetime';
-import bell from '../images/solar-bell.jpg';
-import dp from '../images/dp.png';
+import bell from './images/solar-bell.jpg';
+import dp from './images/dp.png';
 import Image from 'next/image';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';

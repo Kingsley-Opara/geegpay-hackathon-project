@@ -1,9 +1,10 @@
-import marcus from "@/app/images/marcus.jpg"
-import jaydon from "@/app/images/jaydon.jpg"
-import corey from "@/app/images/corey.jpg"
-import cooper from "@/app/images/cooper.jpg"
-import phillip from "@/app/images/phillip.jpg"
-import download from "@/app/images/document-download.jpg"
+import marcus from "@/app/dashboard/images/marcus.jpg"
+import jaydon from "@/app/dashboard/images/jaydon.jpg"
+import corey from "@/app/dashboard/images/corey.jpg"
+import cooper from "@/app/dashboard/images/cooper.jpg"
+import phillip from "@/app/dashboard/images/phillip.jpg"
+import download from "@/app/dashboard/images/document-download.jpg"
+
 
 
 export const BarChartData = {
